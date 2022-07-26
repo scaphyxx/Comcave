@@ -1,4 +1,4 @@
-package com.scaphyxx;
+package Lohn;
 
 /** main */
 public class Main {

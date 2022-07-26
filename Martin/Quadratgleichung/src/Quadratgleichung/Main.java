@@ -1,4 +1,4 @@
-package com.scaphyxx;
+package Quadratgleichung;
 
 /** main */
 public class Main {

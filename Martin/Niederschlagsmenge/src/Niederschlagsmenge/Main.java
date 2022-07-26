@@ -1,4 +1,4 @@
-package com.scaphyxx;
+package Niederschlagsmenge;
 
 import java.util.ArrayList;
 

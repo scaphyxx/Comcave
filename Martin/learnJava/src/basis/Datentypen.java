@@ -1,4 +1,4 @@
-package com.scaphyxx;
+package basis;
 
 public class Datentypen {
 
