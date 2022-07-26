@@ -1,6 +1,6 @@
 package basis;
 
-public class Datentypen {
+public class Main {
 
   //	class variablen										sind der Klasse zugehoerig und geben den Status
   //  der Klasse wieder. Sie konnen je nach sichtbarkeit
@@ -44,7 +44,7 @@ public class Datentypen {
 
     // id = '\u0021';							// das ist eine Instanz Variable die NICHT in einer static Methode
     // verwendet werden darf OHNE Bezug zu einem Objekt
-    Datentypen dT = new Datentypen(); // Erzeugen eines Objektes
+    Main dT = new Main(); // Erzeugen eines Objektes
     dT.id = '\u0021'; // Nutzen des Objektes und aendern der Objektvariablen
 
     zeichen = '\u00bf'; // Spanische Umgedrehte ?
