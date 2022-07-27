@@ -25,9 +25,4 @@ public class Main {
     avg /= year.size();
     System.out.println("Durchschnitt:\t\t" + Math.round(avg * 100.0) / 100.0);
   }
-
-  // System.out.println("Niederschlag im April:\t" + April);
-  // System.out.println("Niederschlag im Mai:\t" + Mai);
-  // System.out.println("Niederschlag im Juni:\t " + Juni);
-  // System.out.println("\nDurchschnitt:\t\t" + avg);
 }
