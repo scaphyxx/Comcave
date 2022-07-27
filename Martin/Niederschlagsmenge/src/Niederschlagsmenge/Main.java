@@ -23,7 +23,7 @@ public class Main {
       avg += m.getNs();
     }
     avg /= year.size();
-    System.out.println("Durchschnitt:\t\t" + avg);
+    System.out.println("Durchschnitt:\t\t" + Math.round(avg * 100.0) / 100.0);
   }
 
   // System.out.println("Niederschlag im April:\t" + April);
