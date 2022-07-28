@@ -128,9 +128,13 @@ public class SwitchCase {
 		
 		String hexa = "";
 		
-		while(dezBerechnung % 16 > 0) {	
+		while(dezBerechnung % 16 >= 0 && dezBerechnung > 0) {	
 			switch(dezBerechnung % 16) {
 			
+			case 0:
+				dezBerechnung/=16;
+				hexa+="0";
+				break;
 			case 1:
 				dezBerechnung/=16;
 				hexa+="1";
@@ -204,5 +208,5 @@ public class SwitchCase {
 		}
 		System.out.println(ausgabe);
 	}
-
+	//String a = Integer.toHexString(13);
 }
