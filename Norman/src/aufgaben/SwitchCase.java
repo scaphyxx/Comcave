@@ -128,7 +128,7 @@ public class SwitchCase {
 		
 		String hexa = "";
 		
-		while(dezBerechnung % 16 >= 0 && dezBerechnung > 0) {	
+		while(dezBerechnung > 0) {	
 			switch(dezBerechnung % 16) {
 			
 			case 0:
