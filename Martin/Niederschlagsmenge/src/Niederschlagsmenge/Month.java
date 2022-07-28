@@ -3,8 +3,8 @@ package Niederschlagsmenge;
 /** Month */
 public class Month {
 
-  String name;
-  int ns;
+  private String name;
+  private int ns;
 
   public Month(String name, int ns) {
     this.name = name;

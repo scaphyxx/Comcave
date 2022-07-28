@@ -12,6 +12,6 @@ public class Main {
   private static String qGleichung(double x) {
     double quad = x * x;
     double ergebnis = 3 * quad - 8 * x + 4;
-    return "x = " + x + ": Ergebnis = " + (Math.round(ergebnis * 100)/199);
+    return "x = " + x + ": Ergebnis = " + (Math.round(ergebnis * 100)/100);
   }
 }
