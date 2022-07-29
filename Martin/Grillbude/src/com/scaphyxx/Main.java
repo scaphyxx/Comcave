@@ -12,7 +12,7 @@ public class Main {
     print();
 
     while (!quit) {
-      System.out.println("Welche Speise wollen Sie bestellen?");
+      System.out.println("\nWelche Speise wollen Sie bestellen?");
       try {
         int eingabe = sc.nextInt();
         switch (eingabe) {
@@ -59,7 +59,7 @@ public class Main {
   }
 
   public static void print() {
-        System.out.println(
+    System.out.println(
         "Speisekarte:"
             + "\n1. Doener"
             + "\n2. Currywurst"
