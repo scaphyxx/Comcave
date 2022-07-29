@@ -20,45 +20,46 @@ public class Main {
 
     while (!quit) {
       System.out.println("Welche Speise wollen Sie bestellen?");
-      int choice = sc.nextInt();
-      switch (choice) {
-        case 1:
-          System.out.println("Doener");
-          bestellung += "Doener ";
-          break;
-        case 2:
-          System.out.println("Currywurst");
-          bestellung += "Currywurst ";
-          break;
-        case 3:
-          System.out.println("Pommes");
-          bestellung += "Pommes ";
-          break;
-        case 4:
-          System.out.println("Schaschlik");
-          bestellung += "Schaschlik ";
-          break;
-        case 5:
-          System.out.println("Haenchen");
-          bestellung += "Haenchen ";
-          break;
-        case 6:
-          quit = true;
-          System.out.println("Tschau");
-          if (!bestellung.equals("")) {
-            String[] bestellungArray = bestellung.split(" ");
-            System.out.println("Ihre Bestellung:");
-            for (int i = 0; i < bestellungArray.length; i++) {
-              System.out.println(i+1 + ". " + bestellungArray[i]);
+      try {
+        int eingabe = sc.nextInt();
+        switch (eingabe) {
+          case 1:
+            bestellung = bestellung + "Doener ";
+            break;
+          case 2:
+            bestellung = bestellung + "Currywurst ";
+            break;
+          case 3:
+            bestellung = bestellung + "Pommes ";
+            break;
+          case 4:
+            bestellung = bestellung + "Schaschlik ";
+            break;
+          case 5:
+            bestellung = bestellung + "Haenchen ";
+            break;
+          case 6:
+            quit = true;
+            System.out.println("Tschau");
+            if (!bestellung.equals("")) {
+              String[] bestellungArray = bestellung.split(" ");
+              System.out.println("Ihre Bestellung:");
+              for (int i = 0; i < bestellungArray.length; i++) {
+                System.out.println(i + 1 + ". " + bestellungArray[i]);
+              }
+              break;
+            } else {
+              System.out.println("Du hast nichts bestellt");
+              break;
             }
+          default:
+            System.out.println("Ungueltige Eingabe");
             break;
-          } else {
-            System.out.println("Du hast nichts bestellt");
-            break;
-          }
-        default:
-          System.out.println("Ungueltige Eingabe");
+        }
+      } catch (Exception e) {
+        System.out.println("Ungueltige Eingabe");
       }
+      sc.close();
     }
   }
 }
