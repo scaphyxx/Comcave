@@ -33,13 +33,13 @@ public class Main {
             break;
           case 6:
             quit = true;
-            System.out.println("Tschau");
             if (!bestellung.equals("")) {
               String[] bestellungArray = bestellung.split(" ");
-              System.out.println("Ihre Bestellung:");
+              System.out.println("\nIhre Bestellung:");
               for (int i = 0; i < bestellungArray.length; i++) {
                 System.out.println(i + 1 + ". " + bestellungArray[i]);
               }
+              System.out.println("\nTschau");
               break;
             } else {
               System.out.println("Du hast nichts bestellt");
