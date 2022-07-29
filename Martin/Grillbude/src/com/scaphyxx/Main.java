@@ -57,7 +57,6 @@ public class Main {
     }
     sc.close();
   }
-
   public static void print() {
     System.out.println(
         "Speisekarte:"
