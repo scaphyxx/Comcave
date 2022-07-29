@@ -9,14 +9,7 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     boolean quit = false;
     String bestellung = "";
-    System.out.println(
-        "Speisekarte:"
-            + "\n1. Doener"
-            + "\n2. Currywurst"
-            + "\n3. Pommes"
-            + "\n4. Schaschlik"
-            + "\n5. Haenchen "
-            + "\n6. Beenden");
+    print();
 
     while (!quit) {
       System.out.println("Welche Speise wollen Sie bestellen?");
@@ -58,8 +51,21 @@ public class Main {
         }
       } catch (Exception e) {
         System.out.println("Ungueltige Eingabe");
+        print();
+        sc.nextLine();
       }
-      sc.close();
     }
+    sc.close();
+  }
+
+  public static void print() {
+        System.out.println(
+        "Speisekarte:"
+            + "\n1. Doener"
+            + "\n2. Currywurst"
+            + "\n3. Pommes"
+            + "\n4. Schaschlik"
+            + "\n5. Haenchen "
+            + "\n6. Beenden");
   }
 }
