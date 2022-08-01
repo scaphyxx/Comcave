@@ -6,12 +6,11 @@ public class MatheLernProgramm {
 
 	public static void main(String[] args) {
 	    Scanner scanner = new Scanner(System.in);
-	    System.out.println("ZunÃ¤chst werden die Wertebereiche fÃ¼r die Rechenoperatoren abgefragt!\n" +
-	    	"FÃ¼r die Addition und Subtraktion sind Werte von 1 bis 999.999 erlaubt.\n" + 
-	    	"FÃ¼r die Multplikation, Division und Modulo sind Werte von 1 bis 1.000 erlaubt.\n" + 
-	        "Bei Bruchrechnung soll auf zwei Stellen gerundet werden.\n" + 
-	    	"Die Wertebereiche wurden so gewÃ¤hlt da es sich um Kopfrechenaufgaben handelt" + 
-	    	"\nZum beenden ENTER drÃ¼cken.");
+	    System.out.println("Zunächst werden die Wertebereiche für die Rechenoperatoren abgefragt!\n" +
+	    	"Für die Addition und Subtraktion sind Werte von 1 bis 999.999 erlaubt.\n" + 
+	    	"Für die Multplikation, Division und Modulo sind Werte von 1 bis 1.000 erlaubt.\n" + 
+	    	"Die Wertebereiche wurden so gewählt, da es sich um Kopfrechenaufgaben handelt.\n");
+	    
 	    boolean wertebereich=true;
 	   
 	    int summand=0;
@@ -25,44 +24,44 @@ public class MatheLernProgramm {
 	    while(wertebereich) {
 	    	try {
 	    		
-	    			System.out.println(
-	    					"\nBitte gibt den Wertebereich fÃ¼r die Addition und Subtraktion ein: \n1 bis"); 
+	    			System.out.print(
+	    					"Bitte gibt den Wertebereich für die Addition und Subtraktion ein: \n1 bis "); 
 				 	summand= scanner.nextInt();	
 				 	if(summand>=1 && summand<=999999)
 				 		wertebereich=false;
 				 	else throw new Exception();
-				    System.out.println(
-						    "\nBitte gibt den Wertebereich fÃ¼r den ersten Faktor der Multiplikation ein: \n1 bis"); 
+				    System.out.print(
+						    "\nBitte gibt den Wertebereich für den ersten Faktor der Multiplikation ein: \n1 bis "); 
 					faktor1= scanner.nextInt();
 					if(faktor1>=1 && faktor1<=1000)
 				 		wertebereich=false;
 				 	else throw new Exception();
-					System.out.println(
-						    "\nBitte gibt den Wertebereich fÃ¼r den zweiten Faktor der Multiplikation ein: \n1 bis"); 
+					System.out.print(
+						    "\nBitte gibt den Wertebereich für den zweiten Faktor der Multiplikation ein: \n1 bis "); 
 					faktor2= scanner.nextInt();
 					if(faktor2>=1 && faktor2<=1000)
 				 		wertebereich=false;
 				 	else throw new Exception();
-					System.out.println(
-							"\nBitte gibt den Wertebereich fÃ¼r den ZÃ¤hler der Division ein: \n1 bis"); 
+					System.out.print(
+							"\nBitte gibt den Wertebereich für den Zähler der Division ein: \n1 bis "); 
 					zaehler= scanner.nextInt();
 					if(zaehler>=1 && zaehler<=1000)
 				 		wertebereich=false;
 				 	else throw new Exception();
-					System.out.println(
-							"\nBitte gibt den Wertebereich fÃ¼r den Nenner der Division ein: \n1 bis"); 
+					System.out.print(
+							"\nBitte gibt den Wertebereich für den Nenner der Division ein: \n1 bis "); 
 					nenner= scanner.nextInt();
 					if(nenner>=1 && nenner<=1000)
 				 		wertebereich=false;
 				 	else throw new Exception();
-					System.out.println(
-					        "\nBitte gibt den Wertebereich fÃ¼r den ZÃ¤hler fÃ¼r Modulo ein: \n1 bis"); 
+					System.out.print(
+					        "\nBitte gibt den Wertebereich für den Zähler für Modulo ein: \n1 bis "); 
 					moduloZaehl= scanner.nextInt();
 					if(moduloZaehl>=1 && moduloZaehl<=1000)
 				 		wertebereich=false;
 				 	else throw new Exception();
-					System.out.println(
-					        "\nBitte gibt den Wertebereich fÃ¼r den Nenner fÃ¼r Modulo ein: \n1 bis"); 
+					System.out.print(
+					        "\nBitte gibt den Wertebereich für den Nenner für Modulo ein: \n1 bis "); 
 					moduloNenn= scanner.nextInt();
 					if(moduloNenn>=1 && moduloNenn<=1000)
 				 		wertebereich=false;
@@ -75,6 +74,12 @@ public class MatheLernProgramm {
 		          wertebereich = true;
 		          scanner.nextLine();}
 	    }
+	    
+	    System.out.println("\nDie Wertebereiche wurden erfolgreich gesetzt!\n" +
+	    					"Bei Bruchrechnung soll auf zwei Stellen gerundet werden.\n" + 
+	    					"\nZum beenden ENTER drücken.\n" + 
+	    					"\nViel Spass und Erfolg!\n");
+	    
 	    char[] operators = new char[] {'+', '-', '*', '/', '%'};
 	    int richtig = 0;
 	    int falsch = 0;
@@ -138,7 +143,7 @@ public class MatheLernProgramm {
 	                } else {
 	                  falsch++;
 	                  System.out.println("Falsch!");
-	                  System.out.println("Richtig wÃ¤re: " + (rand1 + rand2));
+	                  System.out.println("Richtig wäre: " + (rand1 + rand2));
 	                  avr += (System.currentTimeMillis() - beginn) / 1000.0;
 	                  break;
 	                }
@@ -150,7 +155,7 @@ public class MatheLernProgramm {
 	                } else {
 	                  falsch++;
 	                  System.out.println("Falsch!");
-	                  System.out.println("Richtig wÃ¤re: " + (rand1 - rand2));
+	                  System.out.println("Richtig wäre: " + (rand1 - rand2));
 	                  avr += (System.currentTimeMillis() - beginn) / 1000.0;
 	                  break;
 	                }
@@ -163,7 +168,7 @@ public class MatheLernProgramm {
 	                } else {
 	                  falsch++;
 	                  System.out.println("Falsch!");
-	                  System.out.println("Richtig wÃ¤re: " + (rand1 * rand2));
+	                  System.out.println("Richtig wäre: " + (rand1 * rand2));
 	                  avr += (System.currentTimeMillis() - beginn) / 1000.0;
 	                  break;
 	                }
@@ -178,7 +183,7 @@ public class MatheLernProgramm {
 	                  falsch++;
 	                  System.out.println("Falsch!");
 	                  System.out.println(
-	                      "Richtig wÃ¤re: " + Math.round(((double) rand1 / rand2) * 100) / 100.0);
+	                      "Richtig wäre: " + Math.round(((double) rand1 / rand2) * 100) / 100.0);
 	                  avr += (System.currentTimeMillis() - beginn) / 1000.0;
 	                  break;
 	                }
@@ -191,7 +196,7 @@ public class MatheLernProgramm {
 	                } else {
 	                  falsch++;
 	                  System.out.println("Falsch!");
-	                  System.out.println("Richtig wÃ¤re: " + (rand1 % rand2));
+	                  System.out.println("Richtig wäre: " + (rand1 % rand2));
 	                  avr += (System.currentTimeMillis() - beginn) / 1000.0;
 	                  break;
 	                }
