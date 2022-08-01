@@ -53,9 +53,8 @@ public class Main {
     }
   }
 
-public static void printInstructions() {
-    System.out.println("\nDruecke ");
-    System.out.println("\t 0 - zum verlassen");
-    System.out.println("\t 1 - zum eingeben von Portionen und Erhitzungszeit");
+  public static void printInstructions() {
+    System.out.println("0: Verlassen");
+    System.out.println("1: Zeit");
   }
 }
