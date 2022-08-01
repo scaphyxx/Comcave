@@ -31,8 +31,8 @@ public class Main {
 
   public static void printMenu() {
     System.out.println("\nDruecke...");
-    System.out.println("Alles andere - Exit");
     System.out.println("Enter - Einmal Rollen");
+    System.out.println("Alles andere - Exit");
   }
 
   public static int[] roll() {
@@ -42,7 +42,6 @@ public class Main {
     if (coins < 1) {
       return null;
     } else if (bet > coins) {
-      System.out.println("\nZu viel gesetzt!");
       return null;
     } else {
       coins -= bet;
@@ -81,6 +80,9 @@ public class Main {
     int matches = checkSlutty(slots);
     switch (matches) {
       case 0:
+      if (bet > coins) {
+        return "Du hast nicht genug Coins! Dein Guthaben betraegt " + coins + " Coins";
+      }
       if (coins == 0) {
         System.out.println(result += "\n\nGAME OVER");
         System.exit(0);
