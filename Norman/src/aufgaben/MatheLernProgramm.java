@@ -84,10 +84,10 @@ public class MatheLernProgramm {
 	    int richtig = 0;
 	    int falsch = 0;
 	    double avr = 0;
+	    double beginn, ende;
+	    beginn = System.currentTimeMillis();
 	    while (true) {
 	      boolean repeat = true;
-	      double beginn, ende;
-	      beginn = System.currentTimeMillis();
 	      int randOp = (int) (Math.random() * 5);
 	      int rand1 = 0;
 	      int rand2 = 0;
