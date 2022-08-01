@@ -26,7 +26,6 @@ public class Main {
         case "":
           if (bet != 0) {
             System.out.println(printResult(roll(choice)));
-            sc.nextLine();
             printGameMenu();
             break;
           } else {
