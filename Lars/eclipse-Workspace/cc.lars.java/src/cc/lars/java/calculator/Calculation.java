@@ -1,6 +1,7 @@
 package cc.lars.java.calculator;
 
 public class Calculation {
+// Addition
 	static int addition(int x, int y) {
 		return x + y;
 	}
@@ -16,6 +17,23 @@ public class Calculation {
 	static double addition(double x, double y) {
 		return x + y;
 	}
+
+// Subtraction
+	static int substract(int x, int y) {
+	return x - y;
+	}
+	
+	static double substract(double x, int y) {
+	return x - y;
+	}
+	
+	static double substract(int x, double y) {
+	return x - y;
+	}
+	
+	static double substract(double x, double y) {
+	return x - y;
+	}
 	
 /** var args : 
  * 	Are used to setup a list of variants. Only allowed to use once, not in multiple form */
@@ -24,5 +42,5 @@ public class Calculation {
 //		for(int i = 0 ; i < x.length; i++)
 //			sum += x[i];
 //		return sum;
-	}
+//	}
 }
