@@ -2,19 +2,19 @@ package cc.lars.java.calculator;
 
 public class Calculation {
 // Addition
-	static int addition(int x, int y) {
+	static int sum(int x, int y) {
 		return x + y;
 	}
 	
-	static double addition(double x, int y) {
+	static double sum(double x, int y) {
 		return x + y;
 	}
 	
-	static double addition(int x, double y) {
+	static double sum(int x, double y) {
 		return x + y;
 	}
 	
-	static double addition(double x, double y) {
+	static double sum(double x, double y) {
 		return x + y;
 	}
 
