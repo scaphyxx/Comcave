@@ -34,6 +34,23 @@ public class Calculation {
 	static double substract(double x, double y) {
 	return x - y;
 	}
+
+// Multiplication
+	static int multiply(int x, int y) {
+	return x * y;
+	}
+	
+	static double multiply(double x, int y) {
+	return x * y;
+	}
+
+	static double multiply(int x, double y) {
+	return x * y;
+	}
+		
+	static double multiply(double x, double y) {
+	return x * y;
+	}
 	
 /** var args : 
  * 	Are used to setup a list of variants. Only allowed to use once, not in multiple form */
