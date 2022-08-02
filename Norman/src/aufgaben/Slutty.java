@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Slutty {
 	
-
  private static int coins = 10;
  private static int bet;
  private static String choice;
  private static Scanner sc = new Scanner(System.in);
-
+ private static int[] slots = new int[3];
+ 
 	public static void main(String[] args) {
 		 // Slotmachine
 	    boolean quit = false;
@@ -82,18 +82,26 @@ public class Slutty {
 	 */
 	public static int[] roll() {
 	    System.out.println("Wie viel willst du setzen?");
+	    try {
 	    bet = sc.nextInt();
-	    int[] slots = new int[3];
+	    
 	    if (bet > coins) {
-	      return new int[] {-1, -1, 0};
+	      return slots = new int[] {-1, -1, 0};
 	    } else {
-	      coins -= bet;
-	      System.out.println("\nAm Rollen...");
-	      for (int i = 0; i < slots.length; i++) {
-	        slots[i] = random();
-	      }
+	    	coins -= bet;
+	    	System.out.println("\nAm Rollen...");
+	    	for (int i = 0; i < slots.length; i++) {
+	    		slots[i] = random();
+	    	}
+	      }		
 	    }
+	    catch(Exception e){
+	          System.out.println("Du sollst eine Zahl eintippen du Butterbirne!\n");
+	          sc.nextLine();
+	          roll();
+	          };
 	    return slots;
+	   
 	  }
 
     /**
@@ -104,7 +112,7 @@ public class Slutty {
 	 * @return int[] slots Array mit 3 Zufallszahlen
 	 */
 	public static int[] roll(String choice) {
-	    int[] slots = new int[3];
+	  
 	    if (bet > coins) {
 	      return new int[] {-1, -1, 0};
 	    } else {
@@ -159,7 +167,7 @@ public class Slutty {
 	      result += slots[i] + " ";
 	    }
 	    if (Arrays.toString(slots).equals(Arrays.toString((new int[] {-1, -1, 0})))) {
-	      return "Du hast nicht genug Coins!";
+	      return "Du hast nicht genug Coins! Dein Guthaben = " + coins;
 	    }
 	    int matches = checkSlutty(slots);
 	    switch (matches) {
