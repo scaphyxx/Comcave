@@ -48,7 +48,7 @@ public class Main {
             System.out.println("LOSER!!! DU HAST " + (10 - coins) + " COINS VERLOREN!!!");
             System.exit(0);
           }
-          System.out.println("\nSuper! DU HAST " + coins + " GEWONNEN");
+          System.out.println("\nSuper! DU HAST " + coins + " COINS GEWONNEN");
           System.exit(0);
       }
     }
