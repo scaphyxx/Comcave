@@ -5,14 +5,17 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) throws InterruptedException {
+    char escCodeCursorJump = 0x1B;
+
     Scanner s = new Scanner(System.in);
 
     System.out.print("Groesse des Quadrats: ");
     int in = s.nextInt();
+    s.close();
+
     System.out.print("\033[H\033[2J");
     System.out.flush();
-    char escCodeCursorJump = 0x1B;
-    s.close();
+
 
     while (true) {
       for (int i = 0; i < in; i++) {
