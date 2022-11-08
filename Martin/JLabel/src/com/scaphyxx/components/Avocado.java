@@ -1,4 +1,4 @@
-package Frames;
+package com.scaphyxx.components;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,22 +6,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class AvocadoFrame {
-  private static final String QUOTE = "If life gives you avocados, make guacamole!";
-  private static final BufferedImage BUFFERED_IMAGE = new BufferedImage(1, 1, 1);
-  private static final File INPUT = new File("src/img/avocado-gb38d4f136_640.jpg");
-  private static final int height = 680;
-  private static final int width = 680;
+public class Avocado {
+  private final String QUOTE = "If life gives you avocados, make guacamole!";
+  private final BufferedImage BUFFERED_IMAGE = new BufferedImage(1, 1, 1);
+  private final File INPUT = new File("src/img/avocado-gb38d4f136_640.jpg");
+  private final JLabel jl = new JLabel();
 
-  public AvocadoFrame() {
-    JFrame jf = new JFrame("Avocado");
-    jf.setSize(width, height);
-    jf.setVisible(true);
-    jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+  public Avocado() {
 
     BufferedImage image = BUFFERED_IMAGE;
     try {
@@ -32,8 +25,6 @@ public class AvocadoFrame {
     }
     ImageIcon img = new ImageIcon(image);
 
-    JLabel jl = new JLabel();
-
     jl.setIcon(img);
     jl.setBackground(new Color(0x96ccf1));
     jl.setOpaque(true);
@@ -43,7 +34,9 @@ public class AvocadoFrame {
     jl.setVerticalAlignment(JLabel.CENTER);
     jl.setHorizontalTextPosition(JLabel.CENTER);
     jl.setVerticalTextPosition(JLabel.BOTTOM);
+  }
 
-    jf.add(jl);
+  public JLabel getJl() {
+    return this.jl;
   }
 }
