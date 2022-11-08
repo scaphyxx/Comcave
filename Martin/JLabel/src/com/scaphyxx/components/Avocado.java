@@ -8,14 +8,14 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class Avocado {
+public class Avocado extends JLabel {
   private final String QUOTE = "If life gives you avocados, make guacamole!";
   private final BufferedImage BUFFERED_IMAGE = new BufferedImage(1, 1, 1);
   private final File INPUT = new File("src/img/avocado-gb38d4f136_640.jpg");
   private final JLabel jl = new JLabel();
 
   public Avocado() {
-
+    super();
     BufferedImage image = BUFFERED_IMAGE;
     try {
       image = ImageIO.read(INPUT);
@@ -34,9 +34,5 @@ public class Avocado {
     jl.setVerticalAlignment(JLabel.CENTER);
     jl.setHorizontalTextPosition(JLabel.CENTER);
     jl.setVerticalTextPosition(JLabel.BOTTOM);
-  }
-
-  public JLabel getJl() {
-    return this.jl;
   }
 }

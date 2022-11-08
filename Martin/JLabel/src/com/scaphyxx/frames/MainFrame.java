@@ -2,18 +2,16 @@ package com.scaphyxx.frames;
 
 import javax.swing.JFrame;
 
-public class MainFrame {
-  private final int height = 680;
-  private final int width = 680;
-  private final JFrame jf = new JFrame();
+public class MainFrame extends JFrame{
+
+  private final int height = 640;
+  private final int width = 640;
 
   public MainFrame() {
-    jf.setSize(width, height);
-    jf.setVisible(true);
-    jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-  }
-
-  public JFrame getJf() {
-    return jf;
+    super();
+    this.setSize(width, height);
+    this.setVisible(true);
+    this.setResizable(false);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   }
 }

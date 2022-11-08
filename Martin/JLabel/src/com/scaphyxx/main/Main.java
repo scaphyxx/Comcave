@@ -11,6 +11,6 @@ public class Main {
     MainFrame f = new MainFrame();
     Avocado a = new Avocado();
 
-    f.getJf().add(a.getJl());
+    f.add(a);
   }
 }
